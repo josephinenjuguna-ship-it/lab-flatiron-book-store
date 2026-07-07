@@ -46,13 +46,13 @@ const bookStore = {
 // Write your code here!
 
 // Select Title Element
-const bookStoreTitle = document.getElementById("header")
+const bookStoreTitle = document.getElementById("header");
 
 // Change Element to match Bookstore Name
 bookStoreTitle.textContent = bookStore.name;
 
 // Book Elements
-const bookList = document.getElementById('bookList');
+const bookList = document.getElementById('book-list');
 bookStore.books.forEach(book => {
  // Create Elements
     const bookContainer = document.createElement('li');
@@ -66,11 +66,10 @@ bookStore.books.forEach(book => {
     bookImage.src = book.imageUrl
 
 // Append Element    
-    bookContainer.appendChild('bookTitle');
-    bookContainer.appendChild('bookAuthor');
-    bookContainer.appendChild('bookImage');
-
-    bookList.appendChild('bookContainer');
+    bookContainer.appendChild(bookTitle);
+    bookContainer.appendChild(bookAuthor);
+    bookContainer.appendChild(bookImage);
+    bookList.appendChild(bookContainer);
 });
 
     
