@@ -45,3 +45,32 @@ const bookStore = {
 
 // Write your code here!
 
+// Select Title Element
+const bookStoreTitle = document.getElementById("header")
+
+// Change Element to match Bookstore Name
+bookStoreTitle.textContent = bookStore.name;
+
+// Book Elements
+const bookList = document.getElementById('bookList');
+bookStore.books.forEach(book => {
+ // Create Elements
+    const bookContainer = document.createElement('li');
+    const bookTitle = document.createElement('h3');
+    const bookAuthor = document.createElement('p');
+    const bookImage = document.createElement('img');
+
+ // Change Content   
+    bookTitle.textContent = book.title;
+    bookAuthor.textContent = book.author;
+    bookImage.src = book.imageUrl
+
+// Append Element    
+    bookContainer.appendChild('bookTitle');
+    bookContainer.appendChild('bookAuthor');
+    bookContainer.appendChild('bookImage');
+
+    bookList.appendChild('bookContainer');
+});
+
+    
